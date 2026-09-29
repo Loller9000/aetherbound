@@ -94,7 +94,7 @@
     const legalPrints = (prints || []).filter(isLegalPrinting);
     const legalSets = [...new Set(legalPrints.map(p => p.set))];
     if (!legalSets.length) {
-      const ub = (prints || []).some(p => p.security_stamp === "triangle");
+      const ub = (prints || []).length > 0 && prints.every(p => p.security_stamp === "triangle");
       return {
         status: "notinpool",
         reason: ub ? "Universes Beyond card with no Aetherbound printing" : "Never printed in a legal set",
