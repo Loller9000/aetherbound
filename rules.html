@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rules — Aetherbound</title>
+<meta name="description" content="Deck construction and game rules for the Aetherbound Magic: The Gathering format.">
+<meta name="theme-color" content="#0b0d17">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<section class="page-head">
+  <h1>Rules</h1>
+  <p>Aetherbound uses the Commander rules in full. The only change is the card pool.</p>
+</section>
+
+<h2>Deck construction</h2>
+<ol class="rules-list">
+  <li><strong>100 cards exactly</strong>, including your commander.</li>
+  <li><strong>Your commander</strong> must be a legendary creature (or a card that says it can be your commander). Partner and similar pairing rules work as in Commander, as long as both cards are Aetherbound legal.</li>
+  <li><strong>Singleton.</strong> No more than one copy of any card except basic lands and cards that say a deck can have any number (or a set number) of them.</li>
+  <li><strong>Color identity.</strong> Every card's color identity must fit within your commander's color identity.</li>
+  <li><strong>Every card must be in the Aetherbound pool</strong> (see below) and not on the banlist.</li>
+</ol>
+
+<h2>The card pool</h2>
+<p>A card is in the Aetherbound pool if it has <strong>at least one paper printing</strong> in either:</p>
+<div class="grid cols-2">
+  <div class="card"><h3>Pre-Standard sets</h3><p>The sets released before the Standard format existed: Alpha, Beta, Unlimited, Arabian Nights, Antiquities, Revised, Legends, The Dark, and Fallen Empires.</p></div>
+  <div class="card"><h3>Standard-legal sets</h3><p>Any set that was legal in Standard at any point in Magic's history, from Fourth Edition and Ice Age to today's newest release.</p></div>
+</div>
+<div class="callout">
+  <strong>Reprints don't matter, origin does.</strong> Once a card is in the pool, any printing of it is fine to play. Sol Ring from a Commander precon is legal because Sol Ring was printed in Alpha. A card whose only printings are in Modern Horizons, a Masters set, or a Commander product is not legal, even if you own it.
+</div>
+
+<h3>Always excluded</h3>
+<ul class="plain-list" id="excluded-lines"></ul>
+
+<h2>Game rules</h2>
+<ol class="rules-list">
+  <li>Each player starts at <strong>40 life</strong>.</li>
+  <li>Your commander starts in the <strong>command zone</strong>. You may cast it from there, paying {2} more for each previous time you've cast it from the command zone this game.</li>
+  <li>If your commander would go to your graveyard or exile, you may put it into the command zone instead.</li>
+  <li>A player who has been dealt <strong>21 or more combat damage by a single commander</strong> loses the game.</li>
+  <li>Free-for-all multiplayer is the standard way to play. One-on-one games work too.</li>
+</ol>
+
+<h2>Banlist</h2>
+<p>Aetherbound follows the official Commander banlist, plus any Aetherbound-specific changes. See the <a href="banlist.html">banlist page</a> for the current list.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/layout.js"></script>
+<script>
+document.getElementById("excluded-lines").innerHTML =
+  window.AETHERBOUND.excludedProductLines.map(l => "<li>" + l + "</li>").join("");
+</script>
+</body>
+</html>

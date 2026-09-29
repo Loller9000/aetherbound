@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aetherbound — A Commander Format for Magic's Core Card Pool</title>
+<meta name="description" content="Aetherbound is a 100-card singleton Commander format using only sets that were Standard legal or printed before Standard existed. No Universes Beyond, no Horizons, no Masters.">
+<meta name="theme-color" content="#0b0d17">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<section class="hero">
+  <div class="eyebrow">A Magic: The Gathering Format</div>
+  <h1>Aetherbound</h1>
+  <p class="lead">Commander, bound to Magic's own history. Build from every set that was ever Standard legal, plus the original sets that came before Standard. Nothing from Universes Beyond, nothing from supplemental products.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="checker.html">Check your deck</a>
+    <a class="btn" href="rules.html">Read the rules</a>
+  </div>
+</section>
+
+<section class="grid cols-3" style="margin-top:40px">
+  <div class="card"><div class="stat" id="stat-sets">—</div><div class="stat-label">Legal sets, from Alpha to today</div></div>
+  <div class="card"><div class="stat">100</div><div class="stat-label">Card singleton decks with a legendary commander</div></div>
+  <div class="card"><div class="stat">0</div><div class="stat-label">Universes Beyond, Horizons, or Masters cards</div></div>
+</section>
+
+<h2>What is Aetherbound?</h2>
+<div class="grid cols-2">
+  <div class="card">
+    <h3>Plays like Commander</h3>
+    <p>Same deck construction, same game rules: 100 cards including your commander, singleton, color identity, 40 life, 21 commander damage. If you know Commander, you already know how to play.</p>
+  </div>
+  <div class="card">
+    <h3>Built from Magic's own sets</h3>
+    <p>A card is legal if it was printed in a set that was Standard legal at some point, or in one of the sets released before Standard existed (Alpha through Fallen Empires). Where else it's been reprinted doesn't matter.</p>
+  </div>
+  <div class="card">
+    <h3>No Universes Beyond</h3>
+    <p>Every Universes Beyond card is out, including the ones from Standard-legal UB sets like Final Fantasy and Spider-Man. Aetherbound stays in Magic's own worlds.</p>
+  </div>
+  <div class="card">
+    <h3>No power creep from outside Standard</h3>
+    <p>Cards designed straight into supplemental products (Modern Horizons, Masters sets, Commander precons, Secret Lair) never enter the pool, so the card pool stays grounded in cards that were tested in Standard.</p>
+  </div>
+</div>
+
+<h2>Tools</h2>
+<div class="grid cols-3">
+  <a class="card" href="checker.html"><h3>Deck Checker &rarr;</h3><p class="muted">Paste a decklist from Moxfield, Archidekt, or MTGO and see what's legal.</p></a>
+  <a class="card" href="search.html"><h3>Card Search &rarr;</h3><p class="muted">Search only Aetherbound-legal cards with full Scryfall syntax.</p></a>
+  <a class="card" href="sets.html"><h3>Legal Sets &rarr;</h3><p class="muted">Every set in the pool, and what's excluded.</p></a>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/layout.js"></script>
+<script>document.getElementById("stat-sets").textContent = window.AETHERBOUND.legalSetCodes.size;</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deck Checker — Aetherbound</title>
+<meta name="description" content="Paste a decklist to check it against Aetherbound's card pool, banlist, and Commander deck rules.">
+<meta name="theme-color" content="#0b0d17">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<section class="page-head">
+  <h1>Deck Checker</h1>
+  <p>Paste a list exported from Moxfield, Archidekt, MTGO, or Arena. Put your commander in the commander box, or under a <code>Commander</code> heading in the list.</p>
+</section>
+<div class="checker-layout">
+  <form id="checker-form" class="card">
+    <label class="field" for="cmd-input">Commander(s) <span class="muted small">(one per line, up to two)</span></label>
+    <textarea id="cmd-input" rows="2" placeholder="Atraxa, Praetors' Voice"></textarea>
+    <label class="field" for="deck-input" style="margin-top:16px">Decklist</label>
+    <textarea id="deck-input" rows="18" placeholder="1 Sol Ring&#10;1 Counterspell&#10;1 Birds of Paradise&#10;35 Forest"></textarea>
+    <div class="btn-row" style="justify-content:flex-start;margin-top:16px">
+      <button class="btn primary" type="submit" id="check-btn">Check deck</button>
+      <button class="btn" type="button" id="sample-btn">Load a sample</button>
+    </div>
+    <div class="progress hidden" id="check-progress"><div></div></div>
+    <p class="muted small" id="check-status"></p>
+  </form>
+  <section id="results" aria-live="polite">
+    <div class="card muted">Results appear here.</div>
+  </section>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/config.js"></script>
+<script src="assets/layout.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/checker.js"></script>
+</body>
+</html>
